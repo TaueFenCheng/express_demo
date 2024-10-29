@@ -4,6 +4,7 @@ import path from "path";
 const app = express();
 const bodyParser = require("body-parser");
 import router from "./router";
+import DB from './db'
 import logger from "./log/logger";
 
 // 设置 Handlebars 作为模板引擎
