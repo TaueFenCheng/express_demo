@@ -1,11 +1,14 @@
 const express = require("express");
 import { engine } from "express-handlebars";
 import path from "path";
+import cors from 'cors'
 const app = express();
 const bodyParser = require("body-parser");
 import router from "./router";
 import DB from './db'
 import logger from "./log/logger";
+
+app.use(cors)
 
 // 设置 Handlebars 作为模板引擎
 app.engine(
